@@ -20,7 +20,7 @@
 #include "soc/uart_struct.h"
 #include "sdkconfig.h"
 
-static uart_dev_t* s_uarts[3] = {&UART0, &UART1, &UART2};
+static uart_dev_t* s_uarts[3] = {&UARTS0, &UARTS1, &UARTS2};
 static _lock_t s_uart_locks[3]; // per-UART locks, lazily initialized
 
 static int IRAM_ATTR uart_open(const char * path, int flags, int mode)

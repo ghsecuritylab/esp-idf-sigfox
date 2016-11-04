@@ -57,7 +57,7 @@
 
 //Registers Operation {{
 #define ETS_UNCACHED_ADDR(addr) (addr)
-#define ETS_CACHED_ADDR(addr) (addr) 
+#define ETS_CACHED_ADDR(addr) (addr)
 
 #define BIT(nr)                 (1UL << (nr))
 
@@ -104,10 +104,10 @@
 #define FIELD_TO_VALUE2(_f, _v) (((_v)<<_f##_S) & (_f))
 
 //read value from register
-#define READ_PERI_REG(addr) (*((volatile uint32_t *)ETS_UNCACHED_ADDR(addr))) 
+#define READ_PERI_REG(addr) (*((volatile uint32_t *)ETS_UNCACHED_ADDR(addr)))
 
 //write value to register
-#define WRITE_PERI_REG(addr, val) (*((volatile uint32_t *)ETS_UNCACHED_ADDR(addr))) = (uint32_t)(val)   
+#define WRITE_PERI_REG(addr, val) (*((volatile uint32_t *)ETS_UNCACHED_ADDR(addr))) = (uint32_t)(val)
 
 //clear bits of register controlled by mask
 #define CLEAR_PERI_REG_MASK(reg, mask) WRITE_PERI_REG((reg), (READ_PERI_REG(reg)&(~(mask))))
@@ -265,11 +265,11 @@
  *      2                       1               extern level            FROM_CPU                FROM_CPU
  *      3                       1               extern level            TG0_WDT                 Reserved
  *      4                       1               extern level            WBB
- *      5                       1               extern level            BT Controller 
+ *      5                       1               extern level            BT Controller
  *      6                       1               timer                   FreeRTOS Tick(L1)       FreeRTOS Tick(L1)
  *      7                       1               software                Reserved                Reserved
- *      8                       1               extern level            BLE Controller 
- *      9                       1               extern level            
+ *      8                       1               extern level            BLE Controller
+ *      9                       1               extern level
  *      10                      1               extern edge             Internal Timer
  *      11                      3               profiling
  *      12                      1               extern level
@@ -288,7 +288,7 @@
  *      25                      4               extern level            Reserved                Reserved
  *      26                      5               extern level            Reserved                Reserved
  *      27                      3               extern level            Reserved                Reserved
- *      28                      4               extern edge             
+ *      28                      4               extern edge
  *      29                      3               software                Reserved                Reserved
  *      30                      4               extern edge             Reserved                Reserved
  *      31                      5               extern level            Reserved                Reserved
@@ -310,6 +310,9 @@
 #define ETS_UART0_INUM                          5
 #define ETS_UART1_INUM                          5
 //Other interrupt number should be managed by the user
+#define ETS_SPI1_INUM                          17
+#define ETS_SPI2_INUM                          17
+#define ETS_SPI3_INUM                          17
 
 
 #endif /* _ESP32_SOC_H_ */

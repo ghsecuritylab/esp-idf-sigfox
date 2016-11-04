@@ -76,7 +76,7 @@
 /* ESP31 and ESP32 are dualcore processors. */
 #ifndef CONFIG_FREERTOS_UNICORE
 #define portNUM_PROCESSORS 2
-#else 
+#else
 #define portNUM_PROCESSORS 1
 #endif
 
@@ -148,7 +148,7 @@
  * memory.
  *
  * THESE PARAMETERS ARE DESCRIBED WITHIN THE 'CONFIGURATION' SECTION OF THE
- * FreeRTOS API DOCUMENTATION AVAILABLE ON THE FreeRTOS.org WEB SITE. 
+ * FreeRTOS API DOCUMENTATION AVAILABLE ON THE FreeRTOS.org WEB SITE.
  *----------------------------------------------------------*/
 
 #define configUSE_PREEMPTION			1
@@ -157,6 +157,9 @@
 #define configUSE_TICK_HOOK				( CONFIG_INT_WDT )
 
 #define configTICK_RATE_HZ				( CONFIG_FREERTOS_HZ )
+
+#define configSUPPORT_STATIC_ALLOCATION 1
+#define configSUPPORT_DYNAMIC_ALLOCATION 1
 
 /* Default clock rate for simulator */
 //#define configCPU_CLOCK_HZ				80000000

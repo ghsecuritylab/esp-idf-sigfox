@@ -359,7 +359,7 @@ typedef volatile struct {
     uint32_t date;                                    /**/
     uint32_t id;                                      /**/
 } uart_dev_t;
-extern uart_dev_t UART0;
-extern uart_dev_t UART1;
-extern uart_dev_t UART2;
+extern uart_dev_t UARTS0;
+extern uart_dev_t UARTS1;
+extern uart_dev_t UARTS2;
 #endif  /* _SOC_UART_STRUCT_H_ */
