@@ -166,7 +166,7 @@
 
 /* This has impact on speed of search for highest priority */
 #ifdef SMALL_TEST
-#define configMAX_PRIORITIES			( 7 )
+#define configMAX_PRIORITIES			( 10 )
 #else
 #define configMAX_PRIORITIES			( 25 )
 #endif
@@ -260,7 +260,7 @@
 /* Test FreeRTOS timers (with timer task) and more. */
 /* Some files don't compile if this flag is disabled */
 #define configUSE_TIMERS                    1
-#define configTIMER_TASK_PRIORITY           1
+#define configTIMER_TASK_PRIORITY           8
 #define configTIMER_QUEUE_LENGTH            10
 #define configTIMER_TASK_STACK_DEPTH        configMINIMAL_STACK_SIZE
 
@@ -271,7 +271,7 @@
 #if (!defined XT_INTEXC_HOOKS)
 #define configXT_INTEXC_HOOKS               1   /* Exception hooks used by certain tests */
 #if configUSE_TRACE_FACILITY_2
-#define configASSERT_2						1	/* Specific to Xtensa port */
+#define configASSERT_2                      10  /* Specific to Xtensa port */
 #endif
 #endif
 
